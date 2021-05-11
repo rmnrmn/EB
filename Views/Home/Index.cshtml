@@ -1,31 +1,405 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿ @model EB.ViewModels.HomeViewModels
+     <aside id="colorlib-hero">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url(//images/img_bg_5.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+                                <div class="slider-text-inner text-center">
+                                    <h2>Welcome to Easy-Booking</h2>
+                                    <h1>Luxury Hotels</h1>
+                                    <p><a class="btn btn-primary btn-demo" href="@Url.Action("About","Home")"></i> View Detail</a> <a class="btn btn-primary btn-learn" href="@Url.Action("Hotels","Home")"</i>Know More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(/images/img_bg_1.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+                                <div class="slider-text-inner text-center">
+                                    <h2>Discover &amp; Enjoy</h2>
+                                    <h1>Everything you need in Easy-Booking</h1>
+                                    <p><a class="btn btn-primary btn-demo" href="#"></i> View Detail</a> <a class="btn btn-primary btn-learn">Know More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(/images/img_bg_3.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container-fluids">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+                                <div class="slider-text-inner text-center">
+                                    <h2>You are invited</h2>
+                                    <h1>We know how to please you</h1>
+                                    <p><a class="btn btn-primary btn-demo" href="#"></i> View Detail</a> <a class="btn btn-primary btn-learn">Know More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(/images/img_bg_4.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+                                <div class="slider-text-inner text-center">
+                                    <h2>Come &amp; enjoy the unforgetable nights</h2>
+                                    <h1>Everywhere in the world</h1>
+                                    <p><a class="btn btn-primary btn-demo" href="#"></i> View Detail</a> <a class="btn btn-primary btn-learn">Know More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="colorlib-reservation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 search-wrap">
+                    <form action="Search" class="colorlib-form">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" method="GET">
+                                    <label for="location">Location:</label>
+                                    <div class="form-field">
+                                        <input type="text" id="laocation" class="form-control" runat="server" placeholder="Location"><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="date">Check-in:</label>
+                                    <div class="form-field">
+                                        <i class="icon icon-calendar2"></i>
+                                        <input type="text" id="date" class="form-control date" placeholder="Check-in date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="date">Check-out:</label>
+                                    <div class="form-field">
+                                        <i class="icon icon-calendar2"></i>
+                                        <input type="text" id="date" class="form-control date" placeholder="Check-out date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="adults">Adults</label>
+                                    <div class="form-field">
+                                        <i class="icon icon-arrow-down3"></i>
+                                        <select name="people" id="people" class="form-control">
+                                            <option value="#">1</option>
+                                            <option value="#">2</option>
+                                            <option value="#">3</option>
+                                            <option value="#">4</option>
+                                            <option value="#">5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="children">Children</label>
+                                    <div class="form-field">
+                                        <i class="icon icon-arrow-down3"></i>
+                                        <select name="people" id="people" class="form-control">
+                                            <option value="#">1</option>
+                                            <option value="#">2</option>
+                                            <option value="#">3</option>
+                                            <option value="#">4</option>
+                                            <option value="#">5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                
+                                <input type="submit" name="submit" id="submit" value="Search" class="btn btn-primary btn-block" href="@Url.Action("About","Home")" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div id="colorlib-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="flaticon-reception"></i>
+                        </span>
+                        <h3>24/7 Front Desk</h3>
+                        <p>We know how important is to get help ASAP when you are in holiday or when you book a holiday in the last minute. Our phone lines are availible 24/7 so that we can take your call anytime and offer you the best service. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="flaticon-herbs"></i>
+                        </span>
+                        <h3>Spa Suites</h3>
+                        <p>As you make your way through The Spa you realise you are somewhere very special. Somewhere dedicated to the well-being of mind, body and soul. A haven for the senses. Make you holiday truly luxurious experience choosing one of the spa hotels. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="flaticon-car"></i>
+                        </span>
+                        <h3>Transfer Services</h3>
+                        <p>For your comfort and peace of mind our hotels offers a wide choice of luxurious hotel transfers with professional and efficient chauffeurs from/to any location of your choice.</p>                   
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box text-center">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="flaticon-cheers"></i>
+                        </span>
+                        <h3>Restaurant &amp; Bar</h3>
+                        <p>Serving up breakfast, all day dining, lunch, dinner, afternoon tea and Sunday roasts or if it's just some drinks and light bites you're after, choose one of our hotels that offer a cosy sanctuary inviting you to sit back in a squashy armchair and relax.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colorlib-rooms" class="colorlib-light-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                    <h2>Most appreciated hotels</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <div class="owl-carousel owl-carousel2">
+                        <div class="item">
+                            <a href="/images/room-1.jpg" class="room image-popup-link" style="background-image: url(/images/room-1.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">Montcalm Royal London House</a></h3>
+                                <p class="price">
+                                    <span class="currency">£</span>
+                                    <span class="price-room">99</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Only 10 rooms are available</li>
+                                    <li><i class="icon-check"></i> All inclusive</li>
+                                    <li><i class="icon-check"></i> Spa and wellness centre & swimming pool</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="/images/room-2.jpg?jjjj" class="room image-popup-link" style="background-image: url(/images/room-2.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">Tower Suites by Blue Orchid</a></h3>
+                                <p class="price">
+                                    <span class="currency">£</span>
+                                    <span class="price-room">89</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Perfect for traveling couples</li>
+                                    <li><i class="icon-check"></i> Breakfast included</li>
+                                    <li><i class="icon-check"></i> Tea/coffee maker in all rooms & Bar</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="/images/room-3.jpg" class="room image-popup-link" style="background-image: url(/images/room-3.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">K West Hotel & Spa</a></h3>
+                                <p class="price">
+                                    <span class="currency">£</span>
+                                    <span class="price-room">119</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Two double beds</li>
+                                    <li><i class="icon-check"></i> Babysitting facilities</li>
+                                    <li><i class="icon-check"></i> 1 free bed available on request</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="/images/room-4.jpg" class="room image-popup-link" style="background-image: url(/images/room-4.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">London Marriott Hotel Canary Wharf</a></h3>
+                                <p class="price">
+                                    <span class="currency">£</span>
+                                    <span class="price-room">139</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Excellent location </li>
+                                    <li><i class="icon-check"></i> All inclusive</li>
+                                    <li><i class="icon-check"></i> Luxury rooms and a state-of-the-art fitness suite</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="/images/room-5.jpg" class="room image-popup-link" style="background-image: url(/images/room-5.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">Complex Cochet</a></h3>
+                                <p class="price">
+                                    <span class="currency">£</span>
+                                    <span class="price-room">59</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Restaurant, bar, private dining areas with a fireplace</li>
+                                    <li><i class="icon-check"></i> Siniaia’s ski slope is a 5-minute drive away</li>
+                                    <li><i class="icon-check"></i> Close to Urlatoarea Waterfall</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="/images/room-6.jpg" class="room image-popup-link" style="background-image: url(/images/room-6.jpg);"></a>
+                            <div class="desc text-center">
+                                <span class="rate-star"><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full full"></i><i class="icon-star-full"></i></span>
+                                <h3><a href="rooms-suites.html">Horwood House Hotel</a></h3>
+                                <p class="price">
+                                    <span class="currency"><small>£</small></span>
+                                    <span class="price-room">79</span>
+                                    <span class="per">/ per night</span>
+                                </p>
+                                <ul>
+                                    <li><i class="icon-check"></i> Spa and wellness centre</li>
+                                    <li><i class="icon-check"></i> Room service</li>
+                                    <li><i class="icon-check"></i> Free parking</li>
+                                </ul>
+                                <p><a class="btn btn-primary btn-book" href="@Url.Action("Book","Home")">Book now!</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center animate-box">
+                    <a href="@Url.Action("Hotels","Home")">View all rooms <i class="icon-arrow-right3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+
+    <div id="colorlib-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                    <h2>Recent Blog</h2>
+                    <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+            <div class="blog-flex">
+                <div class="video colorlib-video" style="background-image: url(/images/blog-3.jpg);">
+                    <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
+                    <div class="overlay"></div>
+                </div>
+                <div class="blog-entry">
+                    <div class="row">
+                        <div class="col-md-12 animate-box">
+                            <a href="blog.html" class="blog-post">
+                                <span class="img" style="background-image: url(/images/blog-1.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">January 14, 2018</span>
+                                    <h3>A Definitive Guide to the Best Dining</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 animate-box">
+                            <a href="blog.html" class="blog-post">
+                                <span class="img" style="background-image: url(/images/blog-2.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">January 14, 2018</span>
+                                    <h3>How These 5 People Found The Path to Their Dream Trip</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 animate-box">
+                            <a href="blog.html" class="blog-post">
+                                <span class="img" style="background-image: url(/images/blog-3.jpg);"></span>
+                                <div class="desc">
+                                    <span class="date">January 14, 2018</span>
+                                    <h3>Our Secret Island Boat Tour Is just for You</h3>
+                                    <span class="cat">Activities</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 animate-box text-right">
+                            <a href="#">View all blog post <i class="icon-arrow-right3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div id="colorlib-testimony" class="colorlib-light-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                    <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                    <h2>Our Satisfied Guests says</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 animate-box">
+                    <div class="testimony text-center">
+                        <span class="img-user" style="background-image: url(/images/person2.jpg);"></span>
+                        <span class="user">Brian Doe</span>
+                        <small>Satisfied Customer</small>
+                        <blockquote>
+                            <p></i>I never had problems with easy-booking, booked about 20 times and prices often lower than book directly with the hotel. When borders were unexpectedlyclosed, I called easy-booking support and they moved the dates without additional fee. So I consider service as very good.</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-box">
+                    <div class="testimony text-center">
+                        <span class="img-user" style="background-image: url(/images/person1.jpg);"></span>
+                        <span class="user">Nathalie Miller</span>
+                        <small>Satisfied Customer</small>
+                        <blockquote>
+                            <p></i> I am very happy with the service they offer, especially during this challenging period, they offer 24/7 support and all the necessary information depending on the location you choose.</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-box">
+                    <div class="testimony text-center">
+                        <span class="img-user" style="background-image: url(/images/person3.jpg);"></span>
+                        <span class="user">Shara Jones</span>
+                        <small>Satisfied Customer</small>
+                        <blockquote>
+                            <p></i>I was tired of always choosing hotels that seem impeccable online, but they offer deplorable service. Since I use easy-booking for family holidays, all the hotels I booked live up to expectations and provide good services.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

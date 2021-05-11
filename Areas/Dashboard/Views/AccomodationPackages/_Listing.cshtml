@@ -1,0 +1,81 @@
+﻿
+@model EB.Areas.Dashboard.ViewModels.AccomodationPackageListingModel
+
+@if (Model != null && Model.AccomodationPackages != null && Model.AccomodationPackages.Count() > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">FeePerNight</th>
+                <th scope="col">Accomodation Type</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var accomodationPackage in Model.AccomodationPackages)
+            {
+                <tr>
+                    <td>
+                        @accomodationPackage.Name
+                    </td>
+                    <td>
+                        @accomodationPackage.FeePerNight
+                    </td>
+                    <td>
+                        @if (accomodationPackage.AccomodationType != null)
+                        {
+                            @accomodationPackage.AccomodationType.Name
+                        }
+                    </td>
+                    <td>
+                        <button data-href="@Url.Action("Action", "AccomodationPackages", new { ID = accomodationPackage.ID })" type="button" class="data-btn btn btn-primary" data-toggle="modal" data-target="#actionModal"><i class="fas fa-pen mr-1>" Edit</button>
+                        <button data-href="@Url.Action("Delete", "AccomodationPackages", new { ID = accomodationPackage.ID })" type="button" class="data-btn btn btn-primary" data-toggle="modal" data-target="#actionModal">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+            /*@if (Model.Pager.EndPage > 1)
+            {
+                <ul class="pagination">
+                    @if (Model.Pager.CurrentPage > 1)
+                    {
+                        <li>
+                            <a href="~/Home/Index">First</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Index?page=@(Model.Pager.CurrentPage - 1)">Previous</a>
+                        </li>
+                    }
+
+                    @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+                    {
+                        <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                            <a href="~/Home/Index?page=@page">@page</a>
+                        </li>
+                    }
+
+                    @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+                    {
+                        <li>
+                            <a href="~/Home/Index?page=@(Model.Pager.CurrentPage + 1)">Next</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Index?page=@(Model.Pager.TotalPages)">Last</a>
+                        </li>
+                    }
+                </ul>
+                }
+            */
+        }
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+            Sorry! No records exist.
+            </div>
+}
+
+
+

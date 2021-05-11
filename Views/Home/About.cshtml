@@ -1,7 +1,86 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+@model EB.ViewModels.AboutViewModels
+@*@{
+        ViewBag.Title = "About";
+    }*@
+<aside id="colorlib-hero">
+    <div class="flexslider">
+        <ul class="slides">
+            <li style="background-image: url(/images/img_bg_5.jpg);">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+                            <div class="slider-text-inner slider-text-inner2 text-center">
+                                <h2>Information</h2>
+                                <h1>About Us</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</aside>
 
-<p>Use this area to provide additional information.</p>
+<div id="colorlib-about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about animate-box">
+                    <h2>Who are we?</h2>
+                    <p>We are a UK based hotel booking company who have dedicated ourselves to make exploring the world accessible to everyone.</p>
+                    <p>Every hotel's goal is to increase their business and to earn the profit. We believe that the foundation for achieving this goal is to make reservation for customers as easy as possible. Easy-booking is here for you 24*7 to book or to advertise your property as if your busineess it's not showing online yet you can miss a great opportunity.</p>
+                    <p>Easy-booking is the platform that makes all the stress you going through before holiday a pleasure to explore and also helps you manage your business hassle-free.</p>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="/images/img_bg_5.jpg" alt="Free HTML5 Bootstrap Template by colorlib.com">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="colorlib-testimony" class="colorlib-light-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+                <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                <h2>Our Satisfied Guests says</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 animate-box">
+                <div class="testimony text-center">
+                    <span class="img-user" style="background-image: url(/images/person2.jpg);"></span>
+                    <span class="user">Brian Doe</span>
+                    <small>Satisfied Customer</small>
+                    <blockquote>
+                        <p></i>I never had problems with easy-booking, booked about 20 times and prices often lower than book directly with the hotel. When borders were unexpectedlyclosed, I called easy-booking support and they moved the dates without additional fee. So I consider service as very good.</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="testimony text-center">
+                    <span class="img-user" style="background-image: url(/images/person1.jpg);"></span>
+                    <span class="user">Nathalie Miller</span>
+                    <small>Satisfied Customer</small>
+                    <blockquote>
+                        <p></i> I am very happy with the service they offer, especially during this challenging period, they offer 24/7 support and all the necessary information depending on the location you choose.</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="testimony text-center">
+                    <span class="img-user" style="background-image: url(/images/person3.jpg);"></span>
+                    <span class="user">Shara Jones</span>
+                    <small>Satisfied Customer</small>
+                    <blockquote>
+                        <p></i>I was tired of always choosing hotels that seem impeccable online, but they offer deplorable service. Since I use easy-booking for family holidays, all the hotels I booked live up to expectations and provide good services.</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

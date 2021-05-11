@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EB.Services;
+using EB.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,20 +12,46 @@ namespace EB.Controllers
     {
         public ActionResult Index()
         {
+            HomeViewModels model = new HomeViewModels();
+
+            AccomodationTypesService service = new AccomodationTypesService();
+
+            model.AccomodationTypes = service.GetAllAccomodationTypes();
+
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
+        
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
+            return View();
+        }
+       
+        public ActionResult About()
+        {
+            return View();
+        }
+       
+        public ActionResult Hotels(string location, string Hotel)
+        {
+            HotelsViewModels model = new HotelsViewModels();
+            model.location = location;
+            return View();
+        }
+        
+        public ActionResult Search(string location, string Hotel)
+        {
+            SearchViewModels model = new SearchViewModels();
+            model.location = location;
+            return View();
+        }
+        
+        public ActionResult Book()
+        {
+            return View();
+        }
+        
+        public ActionResult Pay()
+        { 
             return View();
         }
     }

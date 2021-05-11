@@ -1,0 +1,68 @@
+﻿
+@model EB.ViewModels.BookViewModels
+
+
+<div class="col-md-10 col-md-offset-1 animate-box">
+    <h3>Confirm Booking</h3>
+    <form action="Payment">
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="cdate">Check-in Date</label>
+                <input type="text" id="date" class="form-control date" placeholder="Check-in date">
+
+            </div>
+            <div class="col-md-6">
+                <label for="nights">Duration Of Stay Nights</label>
+                <input type="text" id="nights" class="form-control" placeholder="Duration">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="adults">Adults</label>
+                <div class="form-field">
+                    <select name="people" id="people" class="form-control">
+                        <option value="#">1</option>
+                        <option value="#">2</option>
+                        <option value="#">3</option>
+                        <option value="#">4</option>
+                        <option value="#">5+</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="adults">Children</label>
+                <div class="form-field">
+                    <select name="people" id="people" class="form-control">
+                        <option value="#">1</option>
+                        <option value="#">2</option>
+                        <option value="#">3</option>
+                        <option value="#">4</option>
+                        <option value="#">5+</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control" placeholder="Your email address">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="notes">Add special notes</label>
+                <input type="text" id="notes" class="form-control" placeholder="Your notes for this booking">
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <p><a class="btn btn-primary btn-book" href="@Url.Action("Payment","Home")">Book now!</a></p>
+        </div>
+       
+    </form>
+</div>
+ 
+
+
+

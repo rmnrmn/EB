@@ -1,0 +1,65 @@
+﻿@model EB.ViewModels.PaymentViewModels
+
+<div class="col-md-10 col-md-offset-1 animate-box">
+    <h3>Confirm Payment</h3>
+    <form action="Payment">
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="cardname">Name on card</label>
+                <input type="text" id="cardname" class="form-control date" placeholder="Name">
+
+            </div>
+            <div class="col-md-6">
+                <label for="cardno">Card Number</label>
+                <input type="text" id="cardno" class="form-control" placeholder="Card Number">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="emonth">Expiry month</label>
+                <div class="form-field">
+                    <select name="emonth" id="emonth" class="form-control">
+                        <option value="#">1</option>
+                        <option value="#">2</option>
+                        <option value="#">3</option>
+                        <option value="#">4</option>
+                        <option value="#">5</option>
+                        <option value="#">6</option>
+                        <option value="#">7</option>
+                        <option value="#">8</option>
+                        <option value="#">9</option>
+                        <option value="#">10</option>
+                        <option value="#">11</option>
+                        <option value="#">12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="eyear">Expiry year</label>
+                <div class="form-field">
+                    <select name="eyear" id="eyear" class="form-control">
+                        <option value="#">2021</option>
+                        <option value="#">2022</option>
+                        <option value="#">2023</option>
+                        <option value="#">2024</option>
+                        <option value="#">2025</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" class="form-control" placeholder="Card Number">
+            </div>
+        </div>
+
+        
+        <div class="form-group text-center">
+            <p><a class="btn btn-primary btn-book" href="@Url.Action("Confirmed","Home")">Pay now!</a></p>
+        </div>
+
+    </form>
+</div>
+
+
+
+
